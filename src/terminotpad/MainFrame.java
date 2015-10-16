@@ -77,7 +77,7 @@ public class MainFrame extends JFrame implements DocumentListener {
         jMenuItemOptions = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("sql IDE");
+        setTitle("TermiNot'Pad - BETA");
         setMinimumSize(new java.awt.Dimension(710, 500));
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {

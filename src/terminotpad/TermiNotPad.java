@@ -5,7 +5,6 @@
  */
 package terminotpad;
 
-import java.sql.Connection;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 

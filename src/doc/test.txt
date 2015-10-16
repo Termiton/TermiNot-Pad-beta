@@ -1,0 +1,20 @@
+/*
+Donc pour celui-ci Il faut cr�e une ligne dans une table
+Et le but est de cr�er une ligne dans la table XALCIN_TEM pour l��tape ANALYSE
+Petit astuce faire un modifier Table et r�cup�rer le filtre de la requ�te 
+
+Nous avons eu un soucis sur un t�moin de s�rie de calcination qui a �t� archiv� directement alors qu�il devait �tre analys�. 
+(il a �t� analys� par la suite 0fibre sur 20 champs)
+Est-ce que vous pourriez modifier, sur la s�rie de Calcination EQ6631/03-09-15/2, le t�moin : 
+ETAPE : ANALYSE
+R�sultat : Structures = 0 � Ouvertures = 20
+*/
+
+rollback
+
+SELECT * FROM XCALCIN_TEM where XCODE_SERIE in ('EQ6631/03-09-15/2','EQ3397/02-09-15/7') and XETAPE  in ('ARCHIVE','ANALYSE')
+
+insert into XCALCIN_TEM (XCODE_SERIE,DATEENTER,TIMEENTER,XETAPE,XRESULTAT,XDETAILCOMPTAGE) values ('EQ6631/03-09-15/2','2015-09-03 00:00:00.000','05:40:24','ANALYSE','Structures = 0 - Ouvertures = 20','Grille1|20|0|||_------------|------------|--------|---------------------|-----------------------|-----------------------------------------_TOTAL|20|0|||')
+
+commit
+

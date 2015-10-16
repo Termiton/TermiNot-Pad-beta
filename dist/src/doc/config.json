@@ -1,0 +1,8 @@
+{
+	"dbtype":"sqlserver",
+	"dbserv":"BLAISE-PC",
+	"dbport":1433,
+	"dbname":"sqlsupport.dbo",
+	"usrnam":"usersupport",
+	"psswrd":"azerty"
+}

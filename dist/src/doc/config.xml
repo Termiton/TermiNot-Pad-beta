@@ -1,0 +1,8 @@
+<intialize>
+	<dbtype>"sqlserver"</dbtype>
+	<dbserv>"BLAISE-PC"</dbserv>
+	<dbport>1433</dbport>
+	<dbname>"sqlsupport.dbo"</dbname>
+	<usrnam>"usersupport"</usrnam>
+	<psswrd>"azerty"</psswrd>
+</intialize>

@@ -75,6 +75,12 @@ public class MainFrame extends JFrame implements DocumentListener {
         jMenuItemQuit = new javax.swing.JMenuItem();
         jMenuEdit = new javax.swing.JMenu();
         jMenuItemOptions = new javax.swing.JMenuItem();
+        jMenuLang = new javax.swing.JMenu();
+        langSQL = new javax.swing.JMenuItem();
+        langJAVA = new javax.swing.JMenuItem();
+        langPHP = new javax.swing.JMenuItem();
+        langHTML = new javax.swing.JMenuItem();
+        langCSS = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TermiNot'Pad - BETA");
@@ -192,6 +198,50 @@ public class MainFrame extends JFrame implements DocumentListener {
         jMenuEdit.add(jMenuItemOptions);
 
         jMenuBar1.add(jMenuEdit);
+
+        jMenuLang.setText("Langage");
+
+        langSQL.setText("SQL");
+        langSQL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                langSQLActionPerformed(evt);
+            }
+        });
+        jMenuLang.add(langSQL);
+
+        langJAVA.setText("JAVA");
+        langJAVA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                langJAVAActionPerformed(evt);
+            }
+        });
+        jMenuLang.add(langJAVA);
+
+        langPHP.setText("PHP");
+        langPHP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                langPHPActionPerformed(evt);
+            }
+        });
+        jMenuLang.add(langPHP);
+
+        langHTML.setText("HTML");
+        langHTML.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                langHTMLActionPerformed(evt);
+            }
+        });
+        jMenuLang.add(langHTML);
+
+        langCSS.setText("CSS");
+        langCSS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                langCSSActionPerformed(evt);
+            }
+        });
+        jMenuLang.add(langCSS);
+
+        jMenuBar1.add(jMenuLang);
 
         setJMenuBar(jMenuBar1);
 
@@ -419,6 +469,31 @@ public class MainFrame extends JFrame implements DocumentListener {
         }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void langSQLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_langSQLActionPerformed
+        // TODO add your handling code here:
+        rSyntax.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_SQL);
+    }//GEN-LAST:event_langSQLActionPerformed
+
+    private void langHTMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_langHTMLActionPerformed
+        // TODO add your handling code here:
+        rSyntax.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_HTML);
+    }//GEN-LAST:event_langHTMLActionPerformed
+
+    private void langJAVAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_langJAVAActionPerformed
+        // TODO add your handling code here:
+        rSyntax.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
+    }//GEN-LAST:event_langJAVAActionPerformed
+
+    private void langPHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_langPHPActionPerformed
+        // TODO add your handling code here:
+        rSyntax.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_PHP);
+    }//GEN-LAST:event_langPHPActionPerformed
+
+    private void langCSSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_langCSSActionPerformed
+        // TODO add your handling code here:
+        rSyntax.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_CSS);
+    }//GEN-LAST:event_langCSSActionPerformed
+
     @Override
     public void insertUpdate(DocumentEvent e) {
         //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -561,10 +636,16 @@ public class MainFrame extends JFrame implements DocumentListener {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemOptions;
     private javax.swing.JMenuItem jMenuItemQuit;
+    private javax.swing.JMenu jMenuLang;
     private javax.swing.JPopupMenu jPopup_complete;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField_searchbar;
     private javax.swing.JTextPane jTextPane_resultset;
+    private javax.swing.JMenuItem langCSS;
+    private javax.swing.JMenuItem langHTML;
+    private javax.swing.JMenuItem langJAVA;
+    private javax.swing.JMenuItem langPHP;
+    private javax.swing.JMenuItem langSQL;
     private org.fife.ui.rsyntaxtextarea.RSyntaxTextArea rSyntax;
     // End of variables declaration//GEN-END:variables
     private Fichier localFile = new Fichier();

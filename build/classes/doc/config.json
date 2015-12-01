@@ -1,1 +1,1 @@
-{"dbtype":"sqlserver","dbserv":"localhost","dbport":1443,"dbname":"labase","usrnam":"BLAISE-PC","psswrd":"copate"}
+{"dbtype":"sqlserver","dbserv":"MSSQLSERVER","dbport":1443,"dbname":"labase","usrnam":"MSSQLSERVER","psswrd":"copate"}
